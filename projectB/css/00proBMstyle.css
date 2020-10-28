@@ -1,0 +1,391 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* Noto Sans KR 폰트 */
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid red; */
+}
+body{
+    min-width: 320px;
+}
+:root{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #212121;
+}
+header{
+    width: 10%;
+    padding: 10px;
+}
+.menu{
+    width: 20px;
+}
+.bt{
+    height: 20px;
+}
+.menubar{
+    height: 2px;
+    background: #000;
+    position: relative;
+}
+.bt:hover .menubar{
+    display: block;
+}
+.menu:hover .all{
+    width: 300px;
+    transition: width 0.5s;
+}
+.all > div.gnb{
+    width: calc(100% - 50px);
+    height: 80%;
+    margin: auto;
+}
+.Logo{
+    display: none;
+}
+.material-icons.close{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.scroll{
+    display: none;
+}
+section{
+    width: 100%;
+    height: auto;
+}
+section.scene01{
+    height: 400px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+section > .title{
+    width: calc(100% - 20px);
+    margin: 40% auto 0;
+    align-items: flex-start;
+    padding: 0;
+    color: #fff;
+}
+section > .title > div{
+    width: 280px;
+    background: url(../images/kodak/kasff7.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+.title h4{
+    font-size: 22px;
+}
+.img{
+    width: 10%;
+    height: 100%;
+    background: url(../images/kodak/bg2.jpg) 0 0 no-repeat;
+    background-size: cover;
+    display: none;
+}
+.mainbg{
+    width: 100%;
+    height: 100%;
+    background: url(../images/kodak/09.png) 0 0 repeat, url(../images/kodak/bg1.jpg) 0px 0 no-repeat;
+    background-size: 3px 3px, cover;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+section.scene02 article{
+    width: calc(100% - 20px);
+}
+.information.title{
+    font-size: 18px;
+    padding: 30px;
+}
+.maintitle{
+    font-size: 12px;
+}
+.maintitle .title{
+    font-size: 15px;
+}
+.inforbox{
+    padding: 10px 0 0;
+}
+.inforbox .i01{
+    width: 100%;
+    margin: 10px auto;
+    font-size: 16px;
+}
+.maintitle .title{
+    font-size: 20px;
+    font-weight: 500;
+}
+.infor{
+    flex-direction: column;
+}
+.infortitle{
+    width: 100%;
+}
+.infor > div:last-child{
+    font-size: 14px;
+}
+.infor > div:last-child{
+    font-size: 13px;
+}
+.Binfor > div:first-child{
+    width: 100%;
+}
+.guide{
+    width: calc(100% - 20px);
+    margin: 5px;
+}
+.guide div{
+    margin: 5px;
+}
+.banner{
+    display: none;
+}
+.openTabVertical .tab{
+    width: 80px;
+    height: 100%;
+    /* font-size: 14px; */
+}
+button.tabButton{
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    font-size: 10px;
+}
+.openTabVertical .contents{
+    width: calc(100% - 60px);
+    padding: 0 0 0px 5px;
+}
+.Binfor{
+    flex-direction: column;
+}
+.slide{
+    width: 100%;
+    height: 500px;
+}
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+/* vegas rotate */
+.s02 .slide-content .circle{
+    width: 250px;
+    height: 250px;
+    border: 0.5px solid #fff;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 100;
+    top: 51%;
+    left: 49%;
+    margin: -125px 0 0 -125px;
+}
+.s02 .slide-content .circle::before{
+    width: 250px;
+    height: 250px;
+    /* border: 1px solid #fff; */
+    background: url(../images/kodak/sdads.png) 0 0 no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    content: "";
+}
+.s02 .slide-content .circle::after{
+    width: 270px;
+    height: 270px;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-45deg);
+    border: 1px solid #fff;
+    margin: -135px 0 0 -135px;
+    content: "";
+    animation: rotate 4s infinite;
+    -webkit-animation: rotate 4s infinite;
+    -ms-animation: rotate 4s infinite;
+    -moz-animation: rotate 4s infinite;
+    -o-animation: rotate 4s infinite;
+}
+.art03{
+    width: 100%;
+    height: 100vh;
+}
+.after{
+    width: 20%;
+}
+.after::after{
+    display: none;
+}
+.cheer{
+    width: calc(100% - 10%);
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 30px;
+    overflow: hidden;
+}
+.cheer > div{
+    height: 100%;
+    top: 0;
+}
+.iframe{
+    position: relative;
+    width: 100%;
+    height: 70%;
+}
+.art04{
+    width: 100%;
+    height: auto;
+}
+
+.chapterbox.b01{
+    width: calc(100% - 20px);
+    margin: 150px auto 0;
+    display: flex;
+    flex-direction: column;
+}
+.chapterbox.b01 .chapter01.Left{
+    width: 100%;
+    align-items: center;
+    margin: auto 0;
+}
+.chapterbox.b01 .chapter01.Left .c01box .c01.title::after{
+    width: calc(100% - 20px);
+    height: 80px;
+    opacity: 100%;
+    position: absolute;
+    content: "";
+    top: -70px;
+    left: 0;
+    z-index: 5;
+}
+.chapterbox.b01 .chapter01.Right{
+    width: 100%;
+    height: 350px;
+}
+.chapterbox.b01 .chapter01.Right .photo{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background: url(../images/kodak/14.jpg) -30px -10px no-repeat;
+    background-size: 120%;
+}
+.art05{
+    width: calc(100% - 20px);
+    height: auto;
+    margin: 30px auto 0;
+}
+.art05 .chapterbox.b02{
+    width: 100%;
+    flex-direction: column;
+}
+.chapter02{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.chapter03{
+    width: 100%;
+    color: #e74129;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 10px 0 0 0;
+}
+.chapter02 .c02title{
+    transform: rotate(0deg);
+}
+.chapter03 .c03title{
+    transform: rotate(0deg);
+}
+.chapter02 .c02title,
+.chapter03 .c03title{
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+}
+.chapterbox.b02 .chapter02,
+.chapterbox.b02 .chapter03{
+    width: 100%;
+    display: flex;
+}
+.c02box,
+.c03box{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.c02box .photo{
+    order: 3;
+}
+.chapter02 .c02box .subtitle,
+.chapter03 .c03box .subtitle{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.chapter02 .c02box .text,
+.chapter03 .c03box .text{
+    font-size: 12px;
+    font-weight: 300;
+}
+.chapter02 .c02box .photo,
+.chapter03 .c03box .photo{
+    width: 100%;
+    height: 560px;
+}
+.scene06 article{
+    width: 100%;
+    height: 400px;
+}
+.scene06 article .gallery{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    border: none;
+}
+.scene06 article .gallery .center .pt{
+    width: 100%;
+    height: 400px;
+    transition: all linear 0.4s;
+    position: relative;
+    display: block;
+}
+.scene06 article .gallery .center button.slick-prev,
+.scene06 article .gallery .center button.slick-next{
+    display: none;
+}
+
+.inner{
+    width: 100%;
+    height: 100%;
+}
+.inner > div{
+    height: 80%;
+    margin: auto 0;
+}
+.footleft{
+    font-size: 10px;
+}
+.footleft > div:first-child{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footleft > div:first-child div{
+    margin-right: 5px;
+    position: relative;
+}
+.footleft > div:first-child div:after{
+    display: none;
+}

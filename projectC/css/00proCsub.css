@@ -1,0 +1,704 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* Noto Sans KR 폰트 */
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid red; */
+}
+body{
+    width: 100%;
+    min-width: 1200px;
+}
+ul, li{ list-style: none; }
+:root{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #212121;
+    font-size: 14px;
+}
+.inner{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+article{
+    height: 100%;
+}
+.Hinner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rbox{
+    width: 100%;
+    display: flex;  
+    justify-content: flex-end;
+}
+header{
+    width: 100%;
+    height: 104px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 200;
+    /* background-color: rgba(59,53,53,0.7); */
+    background: #fff;
+    color: #000;
+}
+header a:link,
+header a:hover,
+header a:visited{
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+/* header */
+
+.header2{
+    width: 100%;
+    height: 40px;
+}
+.header3{
+    width: 100%;
+    height: 64px;
+}
+
+.header2 .Hinner{
+    border-bottom: 1px solid #f4f4f4;
+}
+.header2 .Hinner .lbox a{
+    margin: 0 10px 0 0;
+    padding: 1px 10px 2px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 15px;
+}
+.header2 .Hinner .rbox a{
+    margin: 0 10px;
+}
+.header2 .Hinner .rbox a:nth-of-type(4){ color: #f49e00; }
+.header2 .Hinner .rbox span{
+    width: 50px;
+    height: 1.4rem;
+    border-bottom: 1px solid #fff;
+    font-size: 0.9rem;
+    margin: 0 0 0 10px;
+    position: relative;
+}
+.header2 .Hinner .rbox span::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '\25BE';
+}
+.header3 .Hinner a.lbox{
+    width: 182px;
+    height: 100%;
+    background: url(../images/green/07.png) 0px 50% no-repeat;
+    background-size: cover;
+    position: relative;
+    display: block;
+}
+.header3 .Hinner .rbox .header3link{
+    font-size: 1.3rem;
+    margin: 0 30px;
+    cursor: pointer;
+}
+.header3 .Hinner .rbox .material-icons{
+    font-size: 2rem;
+    margin: 0 0 0 20px;
+}
+
+
+/* nav */
+nav{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    border-bottom: 3px solid rgba(0,0,0,0.3);
+    position: absolute;
+    z-index: 100;
+    top: 104px;
+    left: 0;
+    background: linear-gradient(to right, #f3f3f3 400px, #ffffff 800px) 0px 0 no-repeat;
+    transition: height 0.5s;
+}
+nav .Hinner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+nav.on{
+    height: 350px;
+    transition: height 0.5s;
+}
+nav .Hinner .menu{
+    width: 100%;
+    height: 280px;
+    display: flex;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+    position: absolute;
+    opacity: 0;
+}
+
+nav.on .Hinner .menu.on{
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.5s;
+}
+.menu .titlebox{
+    width: 400px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #f3f3f3;
+}
+.menu .titlebox::after{
+    width: 1px;
+    height: 280px;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:  rgba(0,0,0,0.3);
+}
+.menu .titlebox .title{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    position: relative;
+}
+.menu .titlebox .title::after{
+    width: 30px;
+    height: 1px;
+    background-color: #212121;
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+}
+.menu .titlebox .subtitle{ color: #777; }
+.menu .titlebox .ic{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    width: 150px;
+    height: 150px;
+    content: "";
+    background: url(../images/sfac/chrome_reader_mode-black-48dp.svg) 50% 50% no-repeat;
+    background-size: contain;
+    opacity: 0.05;
+}
+.menu .listbox{
+    width: 800px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.menu .listbox ul.list{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+    padding: 30px;
+}
+.menu .listbox ul.list li{
+    width: 100%;
+    margin: 0 0 15px 0;
+    cursor: pointer;
+    letter-spacing: -1px;
+}
+#menu3 .listbox ul.list{
+    flex-flow: row wrap;
+    width: 100%;
+    height: 30px;
+}
+#menu3 .listbox ul.list li{
+    width: 210px;
+}
+.menu .listbox ul.list li:hover,
+.menu .listbox ul.list li.on{
+    color: #FA321A;
+}
+.menu .listbox ul.list li::before{
+    content: '\25B8';
+    margin: 0 5px 0 0;
+}
+.menu .listbox ul.list li.more::after{
+    content: '\002B';
+    margin: 0 0 0 5px;
+}
+.menu .listbox ul.list li.more.on::after,
+.menu .listbox ul.list li.more:hover::after{
+    content: '\002D';
+    margin: 0 0 0 5px;
+}
+.menu .listbox .content{
+    display: block;
+    width: 570px;
+    height: 100%;
+}
+.menu .listbox .content .contentlist{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    width: 570px;
+    height: 100%;
+    padding: 30px;
+    border-left: 1px solid rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: all 0.3s;
+    position: absolute;
+}
+.menu .listbox .content .contentlist.on{
+    opacity: 1;
+    transition: all 0.3s;
+}
+.menu .listbox.list1 .content .contentlist:nth-child(3),
+.menu .listbox.list2 .content .contentlist:nth-child(2),
+.menu .listbox.list6 .content .contentlist:nth-child(2){
+    border-left: none;
+}
+.menu .listbox .content .contentlist > a:link,
+.menu .listbox .content .contentlist > a:visited{
+    display: block;
+    width: 200px;
+    padding: 0 0 0 10px;
+    margin: 0 0 15px 0;
+    color: #666;
+    text-decoration: none;
+    position: relative;
+}
+.menu .listbox .content .contentlist > a:hover{
+    text-decoration: underline;
+}
+.menu .listbox .content .contentlist > a::before{
+    content: '\002D';
+    margin: 0 5px 0 0;
+    position: absolute;
+    left: 0;
+}
+
+/**/
+.art01{
+    background: url(../images/green/03.png) 0 30% no-repeat;
+    background-size: cover;
+}
+.art01 > .inner{
+    height: 250px;
+    font-size: 24px;
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    padding-top: 80px;
+    letter-spacing: -2px;
+    word-spacing: 10px;
+}
+.art02{
+    height: auto;
+    border-bottom: 1px solid #a3a3a3;
+}
+.art02 .inner{
+    display: flex;
+    justify-content: space-between;
+}
+.Lbox{
+    width: 20%;
+    position: relative;
+}
+.pagetitle{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #0f5433;
+    border-radius: 0 30px 0 0;
+    color: #fff;
+    text-align: center;
+    line-height: 150px;
+    font-size: 26px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.pagegnb{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 120px 0 0 0;
+    padding: 20px;
+    flex-direction: column;
+    /* border: 5px solid #303030; */
+    /* background: #f4f4f4; */
+}
+.pagegnb h2{
+    background: #fff;
+}
+.pagegnb .title{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    border: 1px solid rgba(255,255,255);
+    cursor: pointer;
+}
+.pagegnb .title.on{
+    background: #a3a3a3;
+    width: 100%;
+    height: 100%;
+    flex-grow: 0;
+}
+.pagegnb .title.click{
+    width: 100%;
+    height: 50px;
+    flex-grow: 0;
+}
+.pagegnb .title span{
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #212121;
+    text-orientation: upright;
+    writing-mode: horizontal-tb;
+    position: relative;
+}
+.pagegnb .content{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.pagegnb .content.on{
+    width: 100%;
+    height: auto;
+    transition: height 0.5s;
+}
+.pagegnb .content .content_box{
+    width: 100%;
+    height: auto;
+    display: table;
+    font-weight: 200;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.pagegnb .content.on .content_box{
+    background: #f4f4f4;
+    border: 1px solid #f4f4f4;
+}
+.content_box > span{
+    margin: 0 0 5px;
+}
+span > a,
+span > a:visited,
+span > a:active{
+    color: #212121;
+    text-decoration: none;
+}
+.pagebt{
+    width: 80%;
+    height: 110px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.pagebt > a > div{
+    width: 100%;
+    height: 50px;
+    padding: 0 0 0 10px;
+    font-weight: 300;
+    border-radius: 2px;
+    border: 1px solid #f4f4f4;
+    line-height: 50px;
+    background: linear-gradient( to right, #fff 80%, #f4f4f4 20%) 0 0 no-repeat;
+    position: relative;
+}
+.pagebt > a:first-child > div::after{
+    width: 20px;
+    height: 20px;
+    background: url(../images/green/bogoseo.png) 0 0 no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: 15px;
+    right: 8px;
+}
+.pagebt > a:last-child > div::after{
+    width: 20px;
+    height: 20px;
+    background: url(../images/green/sosik.png) 0 0 no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: 15px;
+    right: 8px;
+}
+.pagebt > a,
+.pagebt > a:visited,
+.pagebt > a:active{
+    color: #212121;
+    text-decoration: none;
+}
+.Rbox{
+    width: 78%;
+}
+.Rbox > div:first-child{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 30px;
+}
+.Rbox > div:first-child > span{
+    font-size: 12px;
+    font-weight: 200;
+    margin: 0 0 0 10px;
+    position: relative;
+}
+.Rbox > div:first-child > span::after{
+    width: 0.5px;
+    height: 5px;
+    background: #040400;
+    position: absolute;
+    content: "";
+    top: 40%;
+    left: -6px;
+}
+.Rbox > div:first-child > span:first-child::after{
+    display: none;
+}
+.Rbox > div h1{
+    font-size: 32px;
+    color: #212121;
+}
+.Rbox > div h3{
+    font-size: 18px;
+    font-weight: 300;
+    color: #212121;
+    margin-top: 10px;
+}
+.tab{
+    width: 98%;
+    margin: 50px auto 0;
+}
+.tab ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.tab ul li{
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 40px;
+    margin: 0 0 0 2px;
+    background: #f4f4f4;
+    font-weight: 600;
+    color: #000;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    position: relative;
+    cursor: pointer;
+}
+.tab ul li:first-child{ margin: 0; }
+.tab ul li.on{
+    background: #0f5433;
+    color: #fff;
+}
+.tab ul li:hover::after,
+.tab ul li.on::after{
+    width: 100%;
+    height: 5px;
+    /* background: #73a6c7; */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.tab ul li:hover::after{ background: rgba(255,255,255,0.3); }
+.tab .conBox{
+    display: none;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    /* background:#ccc; */
+    padding: 40px;
+    color: #333;
+    overflow: hidden;
+}
+.tab .conBox.on{ display:block; }
+.con1title > h2,
+.con2title > h2{
+    font-size: 32px;
+    margin:  0 0 10px;
+}
+.con1title > h2:nth-child(2),
+.con2title > h2:nth-child(2){
+    color: #0f5433;
+}
+.con1title > div,
+.con2title > div{
+    text-align: center;
+}
+.con1box,
+.con2box{
+    margin: 30px 0;
+}
+.img{
+    width: 100%;
+    height: 400px;
+    background: url(../images/green/sub1.jpg) 0 -60px no-repeat;
+    background-size: 100%;
+    margin: 0 0 10px;
+}
+
+.con1text{
+    width: 100%;
+    height: auto;
+}
+.Box{
+    height: auto;
+}
+.Box > div > h4{
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+.Box > div > div{
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 10px;
+}
+.con2box > .img{
+    width: 70%;
+    height: 250px;
+    margin: 0 auto 10px;
+    background: url(../images/green/map1.png) 0 0px no-repeat;
+    background-size: 100% 100%;
+}
+.con2box > h4{
+    font-size: 18px;
+}
+.Box2.d01{
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid #b4b4b4;
+    margin: 0 0 30px;
+}
+.Box2.d01 > div{
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+}
+.Box2.d01 > div > div{
+    margin: 5px 0;
+}
+.Box2.d01 > div:first-child{
+    border-right: 1px solid #b4b4b4;
+}
+.Box2.d02{
+    margin: 0 0 10px;
+}
+.Box2.d02 > div > h4{
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+.vbox{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.vbox > div{
+    width: 23%;
+    color: #0f5433;
+    font-size: 15px;
+}
+.vbox > h6{
+    width: 75%;
+    font-size: 13px;
+    font-weight: 300;
+}
+footer{
+    height: 300px;
+    /* background: ; */
+}
+.foot{
+    width: 100%;
+    height: 250px;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.f01,.f02,.f03,.f04{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.foot > div > div:first-child{
+    width: 70%;
+    display: flex;
+}
+.f02 > div:first-child{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.f02 > div:first-child > div{
+    margin: 0 10px 0 0;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.f03 > div:first-child{
+    display: flex;
+    flex-direction: column;
+}
+.f03 > div span{
+    display: flex;
+}
+.foot > .f01 > div:last-child,
+.foot > .f02 > div:last-child,
+.foot > .f03 > div:last-child{
+    width: 135px;
+    height: 100%;
+    line-height: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+.sns > div{
+    width: 45px;
+    height: 100%;
+    margin: 0 10px 0 0;
+}
+.you{
+    background: url(../images/green/youtube.png) 0 0 no-repeat;
+    background-size: contain;
+}
+.face{
+    background: url(../images/green/facebook.png) 0 0 no-repeat;
+    background-size: contain;
+}
+.twi{
+    background: url(../images/green/twitter.png) 0 0 no-repeat;
+    background-size: contain;
+}
+.ins{
+    background: url(../images/green/instagram.png) 0 0 no-repeat;
+    background-size: contain;
+}
+.naver{
+    background: url(../images/green/naver.png) 0 0 no-repeat;
+    background-size: contain;
+}
+.flogo{
+    width: 200px;
+    background: url(../images/green/flogo.png) 0 0 no-repeat;
+    background-size: contain;
+}

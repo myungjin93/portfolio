@@ -1,0 +1,1000 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* Noto Sans KR 폰트 */
+@import url('../css/IEstyle.css');
+/* IE cross browsing */
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid red; */
+}
+:root{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+ul, li{list-style: none;}
+body{ min-width: 1200px; }
+h1{
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+span{
+    font-size: 1.14rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+}
+header.visual{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.visual .full{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+.full iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.slide.vertical-slide.s00.art00{
+    width: 100%;
+    height: 100vh;
+}
+.slide.vertical-slide.s00.art00 .title{
+    width: 62.5%;
+    height: 10%;
+    position: absolute;
+    color: #fff;
+    top: 1%;
+    left: 18.75%;
+    transform: translateX(150%);
+}
+.slide.vertical-slide.s00.art00:hover > .title{
+    transform: translateX(0%);
+    transition: all 0.8s;
+}
+.art00 .title h3{
+    font-size: 1.7rem;
+}
+.art00 .title h2{
+    font-size: 2.57rem;
+}
+.art00 .title a div.logo{
+    width: 45%;
+    height: 15%;
+    margin: 0 0 5%;
+    background: url(../images/aqua/logo.svg) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+.topnav{
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    position: fixed;
+    /* color: #fff; */
+    top: 0;
+    left: 0;
+}
+.topnav:hover{
+    background: rgba(255,255,255,0.7);
+    transition: all 0.2s; 
+}
+
+.topnav > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.topnav > div a .logo{
+    width: 200px;
+    height: 80px;
+    margin: 0 0 0 50px;
+    background: url(../images/aqua/navlogo.svg) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.topnav:hover > div a .logo{
+    background: none;
+}
+.topnav > div a .logo > .whlogo{
+    width: 200px;
+    height: 100%;
+    background: url(../images/aqua/toplogo.svg) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    display: none;
+}
+.topnav:hover > div a .logo > .whlogo{
+    display: block;
+}
+.topnav > div .menu{
+    width: 900px;
+    height: 100%;
+    margin: 0 50px 0 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.topnav > div .menu > span{
+    width: 150px;
+    height: 100%;
+    font-size: 1.2rem;
+    line-height: 70px;
+    text-align: center;
+    position: relative;
+}
+.topnav > div .menu span a{
+    color: #fff;
+    cursor: pointer;
+}
+.topnav:hover > div .menu span a{
+    color: #002f75;
+    cursor: pointer;
+}
+.topnav > div .menu span::after{
+    width: 0%;
+    height: 3px;
+    background: orange;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    z-index: 10;
+}
+.topnav > div .menu span a:hover{
+    color: orange;
+}
+.topnav > div .menu span:hover::after{
+    width: 100%;
+    transition: width 0.3s;
+}
+.topnav > div .menu span a,
+.topnav > div .menu span a:visited,
+.topnav > div .menu span a:active{
+    text-decoration: none;
+
+}
+.topnav > div .menu .all{
+    width: 100%;
+    height: 0;
+    background: rgba(255,255,255,0.7);
+    border-top: 1px solid #bbb;
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 10;
+    overflow-y: hidden;
+    transition: height 0.3s;
+}
+.topnav > div .menu:hover .all{
+    height: 250px;
+    transition: height 0.5s;
+}
+.topnav > div .menu .all > div{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.topnav > div .menu .all > div div.width{
+    width: 900px;
+    margin: 10px 50px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.menu .all div > .width > ul.submenu{
+    width: 150px;
+    text-align: center;
+    list-style: none;
+}
+.menu .all div > .width > ul.submenu li{
+    margin: 0 0 10px 0;
+}
+.menu .all div > .width > ul.submenu li{
+    text-decoration: none;
+}
+.menu .all div > .width > ul.submenu li a,
+.menu .all div > .width > ul.submenu li a:visited,
+.menu .all div > .width > ul.submenu li a:active{
+    text-decoration: none;
+    color: #2a394e;
+    font-size: 1.1rem;
+}
+.menu .all div > .width > ul.submenu li a:hover,
+.menu .all div > .width > ul.submenu li a:visited:hover,
+.menu .all div > .width > ul.submenu li a:active:hover{
+    text-decoration: none;
+    color: orangered;
+}
+ul.gnb{
+    display: none;
+}
+.mMenuBt{
+    display: none;
+}
+.Lang{
+    width: 200px;
+    height: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+.map > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 ;
+    margin: 0 0 0 50px;
+}
+
+.vertical-slider.slick-dotted{
+	margin-bottom: 0;
+}
+.vertical-slider{
+	height: 100vh;
+	overflow: hidden;
+    position: relative;
+	width: 100%;
+}
+/*스크롤*/
+.vertical-slider > .slick-dots{
+	bottom: auto;
+	left: .5em;
+	padding: 0;
+	right: auto;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+	width: auto;
+}
+.vertical-slider > .slick-dots li{
+	display: block;
+	margin: 0 .125em;
+}
+.vertical-slider > .slick-dots li button{
+  	padding: .125em;
+}
+.slick-dots{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+	width: auto;
+}
+.slick-dots li button::before{ color: #fff; }
+.slick-dots li.slick-active button::before{ color: #fff; }
+.vertical-slider .slide{ height: 100vh; }
+
+.slide{ display: block; }
+
+
+.artright.mstyle{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+section article.art01{
+    width: 100%;
+    height: 100vh;
+    background: rgba(255,255,255, 0.6);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+article .box1{
+    width: 72.9%;
+    height: 57.14%;
+    margin: 12% auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+.artleft{
+    width: 72.9%;
+    position: absolute;
+    /* display: none; */
+}
+.artleft > div h1,
+.artleft > div span{
+    color: #002f75;
+}
+.artright{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+    z-index: 110;
+}
+.artrightcontent{
+    width: 100%;
+    height: 100%;
+}
+.artrightcontent h6{
+    color: rgba(0,0,0, 0.85);
+    font-weight: 200;
+    padding: 0;
+}
+.swiper-slide.swiper-slide-active div .title::before,
+.swiper-slide.swiper-slide-active div div.none{
+    display: none;
+}
+div.artrightcontent .box{
+    width: 50%;
+}
+
+.artrightcontent .box.b00 > div{
+    height: 90%;
+    background: url(../images/aqua/slide1.png) -0px -0px no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 2px 2px 15px rgb(0,0,0,0.5);
+}
+.artrightcontent .box.b01 > div{
+    height: 90%;
+    background: url(../images/aqua/slide2.png) -0px -0px no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 2px 2px 15px rgb(0,0,0,0.5);
+}
+.artrightcontent .box.b02 > div{
+    height: 90%;
+    background: url(../images/aqua/slide3.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 2px 2px 15px rgb(0,0,0,0.5);
+}
+.artrightcontent .box.b03 > div{
+    height: 90%;
+    background: url(../images/aqua/slide4.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 2px 2px 15px rgb(0,0,0,0.5);
+}
+.artrightcontent .box > div .b-active{
+    display: none;
+}
+.artrightcontent .box.b00 > div > .b-text{
+    width: auto;
+    position: absolute;
+    text-align: right;
+    top: 25%;
+    right: 10%;
+}
+.artrightcontent .box.b01 > div > .b-text,
+.artrightcontent .box.b03 > div > .b-text{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.artrightcontent .box.b02 > div > .b-text{
+    text-align: right;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+.b-text h6,
+.b-text h2,
+.b-text div{
+    color: rgba(255,138,0);
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.1);
+}
+.b-text h2,
+.b-text div{
+    color: rgba(255,255,255);
+}
+.artrightcontent .box.b00 > div > .b-text a{
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 3px;
+    padding: 3px 30px;
+    /* background: rgba(255,255,255, 0.1); */
+    background: rgba(0,0,0, 0.2);
+    box-shadow: 2px 2px rgba(0,0,0, 0.1);
+    font-weight: 200;
+}
+.artrightcontent .box.b01 > div > .b-text a,
+.artrightcontent .box.b02 > div > .b-text a,
+.artrightcontent .box.b03 > div > .b-text a{
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 3px;
+    padding: 3px 30px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px rgba(0,0,0, 0.1);
+    font-weight: 200;
+}
+.swiper-slide > div > .b-text a,
+.swiper-slide > div > .b-text a:visited,
+.swiper-slide > div > .b-text a:active{
+    color: #fff;
+    text-decoration: none;
+}
+.box.swiper-slide.swiper-slide-active{
+    height: 90%;
+    display: flex;
+    align-items: flex-end;
+}
+.box.swiper-slide.swiper-slide-active div{
+    background: none;
+    box-shadow: none;
+}
+.swiper-slide.swiper-slide-active > div{
+    width: 100%;
+    position: relative;
+}
+.swiper-slide.swiper-slide-active > div > .b-text{
+    display: none;
+}
+.swiper-slide.swiper-slide-active > div .b-active{
+    position: absolute;
+    bottom: 40%;
+    right: 50%;
+    text-align: right;
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+.swiper-slide.swiper-slide-active > div .b-active div:first-child{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+}
+.box.b00.swiper-slide.swiper-slide-active > div{
+    height: 200px;
+    background: url(../images/aqua/sec01some00.svg) 0px 0 no-repeat;
+    background-size: contain;
+    
+}
+.box.b01.swiper-slide.swiper-slide-active > div{
+    height: 200px;
+    background: url(../images/aqua/sec01some01.svg) 0px 0 no-repeat;
+    background-size: contain;
+}
+.box.b02.swiper-slide.swiper-slide-active > div{
+    height: 200px;
+    background: url(../images/aqua/sec01some02.svg) 0px 0 no-repeat;
+    background-size: contain;
+}
+.box.b03.swiper-slide.swiper-slide-active > div{
+    height: 200px;
+    background: url(../images/aqua/sec01some03.svg) 0px 0 no-repeat;
+    background-size: contain;
+}
+.box .swiper-slide.swiper-slide-active{
+    color: #fff;
+    font-size: 18px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box div .title div,
+.box div .contents div:first-child{
+    font-size: 42px;
+}
+article > div{
+    width: 72.9%;
+    height: 57.14%;
+    margin: 12% auto 0;
+}
+.art02 > .box2{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.art02 > .box2::before{
+    width: 59.28%;
+    height: 110%;
+    position: absolute;
+    content: "";
+    background: url(../images/aqua/pricept.jpg) 0 0 no-repeat;
+    top: -25px;
+    left: 0;
+    background-size: cover;
+    z-index: 0;
+}
+.art02 > .box2 .contents{
+    width: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+.con01{
+    display: none;
+}
+.inforbox{
+    width: 100%;
+    height: 55%;
+    text-align: right;
+    color: #fff;
+    background: #0fc7fc;
+    display: flex;
+    justify-content: space-around;
+}
+.inforbox h3{
+    font-size: 1.85rem;
+}
+.inforbox > div > div{
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.inforbox > div.time > div:nth-of-type(even),
+.inforbox > div.price > .pricebox .right div{
+    font-size: 1.28rem;
+    font-weight: 500;
+}
+.inforbox > div.time > div:last-child,
+.inforbox > div.price > div:nth-child(3){
+    font-size: 1rem;
+    font-weight: 200;
+}
+.inforbox > div.price > div:last-child a div{
+    font-size: 0.9rem;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 3px;
+    width: 100px;
+    text-align: center;
+}
+.inforbox > div{
+    width: 40%;
+    height: 85%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.price .pricebox,
+.price .bt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.price .bt a,
+.price .bt a:visited,
+.price .bt a:active{
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+}
+.price .pricebox .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.art03{
+    width: 100%;
+    background: url(../images/aqua/art03.png) 0 0 no-repeat;
+    box-shadow: 2px 2px 15px rgba(0,0,0, 0.1);
+    background-size: cover;
+    color: #fff;
+}
+.art03 .box3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.end{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+.boxright{
+    width: 67%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.boxright .padding{
+    width: 13%;
+}
+.boxright .box.depth01{
+    width: 26%;
+    height: 48%;
+    border-radius: 7px;
+    background: rgba(255,255,255,0.4);
+    font-size: 14px;
+    position: relative;
+    padding: 10px;
+}
+.boxright .box.b01.depth01,
+.boxright .box.b02.depth01,
+.boxright .box.b03.depth01{
+    margin: 0 0 20px 0;
+}
+.box.depth01 > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.boxright .box.b01 .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconeventwh.svg) 0 -5px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+    /* transform: translate(50%,50%); */
+}
+.boxright .box.b02 .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconcardwh.svg) 0 -5px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+}
+.boxright .box.b03 .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconmembershipwh.svg) 0 -4px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+.boxright .box.b04 .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconstudywh.svg) 0 -6px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+}
+.boxright .box.b05 .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconinboundwh.svg) 0 -4px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+}
+.boxright .box.b06 .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconinterprisewh.svg) 0 -5px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+}
+.box.depth01 > .depth02{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    padding: 10px;
+    border-radius: 7px;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 2px 15px rgba(0,0,0, 0.1);
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+}
+.depth02 > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.boxright .box.depth01:hover > .depth02{
+    display: block;
+}
+.boxright .box.b01 > .depth02 a .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconevent.svg) 0 -5px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+}
+.boxright .box.b02 > .depth02 a .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconcard.svg) 0 -5px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+}
+.boxright .box.b03 > .depth02 a .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconmembership.svg) 0 -4px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+}
+.boxright .box.b04 > .depth02 a .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconstudy.svg) 0 -6px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+}
+.boxright .box.b05 > .depth02 a .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconinbound.svg) 0 -4px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+}
+.boxright .box.b06 > .depth02 a .icon{
+    width: 30%;
+    height: 35%;
+    background: url(../images/aqua/iconinterprise.svg) 0 -5px no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: auto;
+}
+.boxright .box.depth01 div,
+.boxright .box.depth01 div:visited,
+.boxright .box.depth01 div:active{
+    color: #fff;
+    text-decoration: none; 
+    font-weight: 300;
+    margin: 0 auto;
+    text-align: center;
+}
+.boxright .box.depth01 .depth02 a,
+.boxright .box.depth01 .depth02 a:visited,
+.boxright .box.depth01 .depth02 a:active{
+    text-decoration: none;
+    margin: 0;
+}
+.boxright .box.depth01 .depth02 a div{
+    color: #002f75;
+    font-weight: 600;
+}
+.boxright .box.depth01 .depth02 a div:last-child{
+    font-size: 0.85rem;
+    font-weight: 300;
+    position: relative;
+}
+.boxright .box.depth01 .depth02 a div:last-child::before{
+    width: 20%;
+    height: 100%;
+    border-bottom: 1px solid #002f75;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    color: #002f75;
+}
+.art04 .box4{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box4 .NEWS{
+    width: 72.9%;
+    height: 52%;
+    margin: 12% auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+.headnews,
+.subnews,
+.art04title{
+    width: 30%;
+    height: 100%;
+}
+.headnews{
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.mainphoto{
+    width: 100%;
+    height: 80%;
+    background: url(../images/aqua/news01.jpg) -30px 0 no-repeat;
+    background-size: 110%;
+    transform: translate(50% 50%);
+}
+.headnews .maintitle{
+    height: 20%;
+    font-size: 1.28rem;
+    font-weight: 500;
+    padding: 10px;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.1);
+    background: rgba(225,225,225,0.5);
+    border-top: 1px solid rgba(0,0,0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.headnews,
+.headnews:visited,
+.headnews:active{
+    color: #000;
+    text-decoration: none;
+}
+.subnews{
+    background: rgba(225,225,225,0.5);
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+}
+.subnews .sub{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.subnews .sub > div.month{
+    width: 13%;
+    height: 100%;
+    padding: 20px 0 0 15px;
+    font-weight: 600;
+    border-right: 1px solid #bbb;
+    position: relative;
+}
+.subnews .sub > div.month::before{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    top: 30px;
+    right: -5px;
+}
+.subnews .sub.b00{
+    display: none;
+}
+.subnews .sub.b00 > div.content{
+    width: 87%;
+    height: 100%;
+    border-bottom: 1px solid #bbb;
+    display: flex;
+    flex-direction: row;
+}
+.subnews .sub.b01 > div.content{
+    width: 87%;
+    height: 100%;
+    border-bottom: 1px solid #bbb;
+    display: flex;
+    flex-direction: row;
+}
+.subnews .sub.b02 > div.content{
+    width: 87%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.content{
+    padding: 10px;
+}
+.content a,
+.content a:visited,
+.content a:active{
+    color: #000;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.1);
+}
+.conbox{
+    width: 50%;
+    height: 100%;  
+}
+.conbox .text{
+    height: 80%;
+    font-weight: 500;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.subnews .sub.b01 > div.content .img{
+    width: 50%;
+    height: 100%;
+    background: url(../images/aqua/news02.jpg) -25px 0 no-repeat;
+    background-size: 130% 100%;
+    transform: translate(50% 50%);
+}
+.subnews .sub.b02 > div.content .img{
+    width: 50%;
+    height: 100%;
+    background: url(../images/aqua/news03.jpg) -25px 0 no-repeat;
+    background-size: 130% 100%;
+    transform: translate(50% 50%);
+}
+.box4 .art04title{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rightdw{
+    width: 100%;
+    height: 40%;
+    color: #fff;
+    font-size: 1.28rem;
+    background: rgb(255, 166, 0);
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer{
+    width: 100%;
+    height: 170px;
+    background: #2a394e;
+}
+.footer > div{
+    width: 72.9%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+.footer div .left{
+    width: 71.42%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+    font-weight: 300;
+}
+.footer div .left div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer div .left div span{
+    font-size: 14px;
+    margin: 0 20px 10px 0 ;
+}
+.footer div .left div.footmenu span{
+    font-weight: 500;
+    position: relative;
+}
+.footer div .left div.footmenu span:nth-child(2){
+    color: orangered;
+    font-weight: 500;
+}
+.footer div .left div.footmenu span:nth-child(1)::before,
+.footer div .left div.footmenu span:nth-child(2)::before,
+.footer div .left div.footmenu span:nth-child(3)::before{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #fff;
+    top: 10px;
+    right: -11px;
+}
+.footer div .right{
+    margin: 20px;
+}
+.Mfooter{
+    display: none;
+}
