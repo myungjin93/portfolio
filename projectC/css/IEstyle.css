@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+
+/* ie11hack */
+@media all and (-ms-high-contrast:none) {
+
+}
+/* ie10,ie11 hack */
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+   
+}
+/* ie9전용 hack */
+/* :root .color {color: #F00\9;} */
+
+/* ie8전용 hack */
+/* @media \0screen {  
+    .color {color: #F00;}  
+} */
+
+/* ie7전용 hack */
+/* *+html .color {color: #F00;} */
+
+/* ie6전용 hack */
+/* * html .color {color: #F00;} */
+
+
+
+/* ie-checker로 cross browsing */
+/* .is-ie 공통요소 */
+.is-ie header .top{ width: 1020px; }
+.is-ie .swiper-button-next{
+    width: 75px;
+    height: 75px;
+    background: url(../images/svg/navigate_next-white-48dp.svg) 50% 50% no-repeat;
+    background-size: cover;
+}
+.is-ie .swiper-button-prev{
+    width: 75px;
+    height: 75px;
+    background: url(../images/svg/navigate_before-white-48dp.svg) 50% 50% no-repeat;
+    background-size: cover;
+}
+/* .ie9 flex안되는 것 보정 */
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.ie9 header{ padding: 25px 0 0 0; }
+.ie9 header .top .logo{ float: left; }
+.ie9 header .top .global{
+    display: block;
+    width: 360px;
+    float: right;
+}
+.ie9 header .top .global .search,
+.ie9 header .top .global .bt,
+.ie9 .search input.searchBox{
+    display: block;
+    float: left;
+}
+.ie9 header .top .global .search{ margin: 6px 0 0 0; }
+.ie9 .search .searchBt{
+    margin: 2px 0 0 0;
+    display: block;
+    float: left;
+}
+.ie9 nav ul.inner li.depth1{
+    display: block;
+    float: left;
+}
+.ie9 .art2 .box:first-child,
+.ie9 .art2 .box .thumnail_01 .img,
+.ie9 .art2 .box:last-child .thumnail_01 .img,
+.ie9 .art2 .box:last-child .thumnail_02 .left,
+.ie9 .art4 .banner_01, 
+.ie9 .art4 .banner_02,
+.ie9 footer .inner .footerLeft{
+    display: block;
+    float: left;
+}
+.ie9 .art2 .box:last-child,
+.ie9 .thumnail_01 .contents,
+.ie9 .art2 .box:last-child .thumnail_02 .right,
+.ie9 footer .inner select{
+    display: block;
+    float: right;
+}
+.art2 .box .thumnail_01{ height: 160px; }

@@ -49,17 +49,33 @@ ul.gnb{
     justify-content: flex-start;
     background: #fff;
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
     transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
 }
 ul.gnb.on{
     transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -o-transform: translateX(0%);
     transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
 }
 ul.gnb li{
     width: 100%;
     margin: 0;
     height: auto;
-    min-height: 80px;
+    min-height: 40px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -71,8 +87,8 @@ ul.gnb li a:visited{
     text-decoration: none;
     color: #0f0f0f;
     font-size: 1.5rem;
-    height: 80px;
-    line-height: 80px;
+    height: 40px;
+    line-height: 40px;
 }
 ul.gnb > li:first-child > a::after,
 ul.gnb li a:hover::after,
@@ -92,7 +108,20 @@ ul.gnb li li a:hover::after{
 ul.gnb > li:hover > ul{
     background: rgba(255,255,255,1);
     transform: unset;
+    -webkit-transform: unset;
+    -ms-transform: unset;
+    -moz-transform: unset;
+    -o-transform: unset;
     transition: unset;
+    -webkit-transition: unset;
+    -ms-transition: unset;
+    -moz-transition: unset;
+    -o-transition: unset;
+    transition: unset;
+    -webkit-transition: unset;
+    -ms-transition: unset;
+    -moz-transition: unset;
+    -o-transition: unset;
     color: unset;
 }
 ul.gnb > li > ul{

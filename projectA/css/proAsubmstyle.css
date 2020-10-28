@@ -49,11 +49,27 @@ ul.gnb{
     justify-content: flex-start;
     background: #fff;
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
     transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
 }
 ul.gnb.on{
     transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -o-transform: translateX(0%);
     transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
 }
 ul.gnb li{
     width: 100%;
@@ -105,7 +121,20 @@ ul.gnb > li > ul{
     top: 0;
     left: 0;
     transform: unset;
+    -webkit-transform: unset;
+    -ms-transform: unset;
+    -moz-transform: unset;
+    -o-transform: unset;
     transition: unset;
+    -webkit-transition: unset;
+    -ms-transition: unset;
+    -moz-transition: unset;
+    -o-transition: unset;
+    transition: unset;
+    -webkit-transition: unset;
+    -ms-transition: unset;
+    -moz-transition: unset;
+    -o-transition: unset;
     z-index: 5;
     display: flex;
     flex-direction: column;

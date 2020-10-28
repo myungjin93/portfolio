@@ -38,3 +38,32 @@ $.vegas.isVideoCompatible = function () {
   var devices = /(Android|webOS|Phone|iPad|iPod|BlackBerry|Windows Phone)/i;
   return !devices.test(navigator.userAgent);
 }
+
+//모바일 메뉴 열기/닫기
+$(document).ready(function(){
+  //리사이징 할때마다 새로고침
+  var lastWidth = $(window).width();
+  $(window).resize(function(){
+      if($(window).width()!=lastWidth){
+          location.reload();
+          lastWidth = $(window).width();
+          return false;
+      }
+  });
+ $(".mMenuBt").click(function(){
+     $("ul.gnb").addClass("on");
+ });
+ $(".bt .close").click(function(){
+     $("ul.gnb").removeClass("on");
+ });
+
+ // 2차 메뉴 열기
+ $(".gnb > li > a").click(function(){
+     $(this).next().slideToggle(300);
+     //this 다음 요소를 슬라이드토글
+     $(".gnb > li > a").not(this).next().slideUp(300);
+     //this가 아니라면 다음 요소는 슬라이드업
+     return false;
+     //a href="#"을 클릭했을때 목적지가 없어서 리프레시 되는것을 막음
+ });
+});

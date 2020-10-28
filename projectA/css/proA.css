@@ -63,10 +63,22 @@ header.visual{
     top: 1%;
     left: 18.75%;
     transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -moz-transform: translateX(150%);
+    -o-transform: translateX(150%);
 }
 .slide.vertical-slide.s00.art00:hover > .title{
     transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -o-transform: translateX(0%);
     transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
 }
 .art00 .title h3{
     font-size: 1.7rem;
@@ -92,7 +104,11 @@ header.visual{
 }
 .topnav:hover{
     background: rgba(255,255,255,0.7);
-    transition: all 0.2s; 
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s; 
+    -ms-transition: all 0.2s; 
+    -moz-transition: all 0.2s; 
+    -o-transition: all 0.2s; 
 }
 
 .topnav > div{
@@ -168,6 +184,10 @@ header.visual{
 .topnav > div .menu span:hover::after{
     width: 100%;
     transition: width 0.3s;
+    -webkit-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -o-transition: width 0.3s;
 }
 .topnav > div .menu span a,
 .topnav > div .menu span a:visited,
@@ -187,10 +207,18 @@ header.visual{
     z-index: 10;
     overflow-y: hidden;
     transition: height 0.3s;
+    -webkit-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -o-transition: height 0.3s;
 }
 .topnav > div .menu:hover .all{
     height: 250px;
     transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s;
 }
 .topnav > div .menu .all > div{
     width: 100%;
@@ -265,8 +293,11 @@ ul.gnb{
 	padding: 0;
 	right: auto;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-			transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 	width: auto;
 }
 .vertical-slider > .slick-dots li{
@@ -280,8 +311,11 @@ ul.gnb{
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	-webkit-transform: translateX(-50%);
-			transform: translateX(-50%);
+	transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 	width: auto;
 }
 .slick-dots li button::before{ color: #fff; }
@@ -918,6 +952,10 @@ article > div{
     background: url(../images/aqua/news02.jpg) -25px 0 no-repeat;
     background-size: 130% 100%;
     transform: translate(50% 50%);
+    -webkit-transform: translate(50% 50%);
+    -ms-transform: translate(50% 50%);
+    -moz-transform: translate(50% 50%);
+    -o-transform: translate(50% 50%);
 }
 .subnews .sub.b02 > div.content .img{
     width: 50%;
@@ -925,6 +963,10 @@ article > div{
     background: url(../images/aqua/news03.jpg) -25px 0 no-repeat;
     background-size: 130% 100%;
     transform: translate(50% 50%);
+    -webkit-transform: translate(50% 50%);
+    -ms-transform: translate(50% 50%);
+    -moz-transform: translate(50% 50%);
+    -o-transform: translate(50% 50%);
 }
 .box4 .art04title{
     text-align: right;

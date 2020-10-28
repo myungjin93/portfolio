@@ -12,6 +12,9 @@ body{
     min-width: 1200px;
 }
 ul, li{ list-style: none; }
+.Mheader{
+    display: none;
+}
 :root{
     font-family: 'Noto Sans KR', sans-serif;
     color: #212121;
